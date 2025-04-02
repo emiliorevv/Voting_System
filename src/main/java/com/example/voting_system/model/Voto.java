@@ -1,9 +1,7 @@
 package com.example.voting_system.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 
 @Entity
 public class Voto {
@@ -12,6 +10,11 @@ public class Voto {
     private long id;
     private boolean voto;
     private LocalDateTime fechaVoto;
+
+    @ManyToOne
+    @JoinColumn(name = "Cantidad de votos")
+    private Candidato candidato;
+
 
     public Voto() {
 

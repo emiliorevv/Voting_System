@@ -1,10 +1,8 @@
 package com.example.voting_system.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.Scanner;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 
 @Entity
 public class Eleccion {
@@ -17,6 +15,8 @@ public class Eleccion {
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;
     private boolean activa;
+
+    //@OneToOne()
 
     public Eleccion() {
 

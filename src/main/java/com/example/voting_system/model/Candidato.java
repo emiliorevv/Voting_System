@@ -1,8 +1,5 @@
 package com.example.voting_system.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity
 public class Candidato {
@@ -13,6 +10,11 @@ public class Candidato {
     private String nombre;
     private String descripcion;
     private String imagen;
+
+    @OneToMany(mappedBy = "Cantidad de votos") //Funciona para la bidireccionalidad de la columna de la tabla
+    private java.util.List<Voto> votos;
+
+
 
     public Candidato(){
 
