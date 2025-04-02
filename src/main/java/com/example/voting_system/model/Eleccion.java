@@ -18,8 +18,7 @@ public class Eleccion {
     private Resultados resultados;
 
     @ManyToOne()
-    @JoinColumn(name = "Eleccion actual")
-    private Eleccion eleccionActual;
+    private Candidato candidato;
 
     public Eleccion() {
 

@@ -14,7 +14,6 @@ public class Usuario {
     private Role role;
 
     @ManyToOne
-    @JoinColumn(name = "Voto efecutado")
     private Voto voto;
 
     public Usuario() {

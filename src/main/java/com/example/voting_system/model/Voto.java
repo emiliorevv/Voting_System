@@ -12,10 +12,9 @@ public class Voto {
     private LocalDateTime fechaVoto;
 
     @ManyToOne
-    @JoinColumn(name = "Cantidad de votos")
     private Candidato candidato;
 
-    @OneToMany(mappedBy = "Voto efectuado")
+    @OneToMany(mappedBy = "voto")
     private java.util.List<Usuario> usuarios;
 
 

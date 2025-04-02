@@ -13,6 +13,8 @@ public class Resultados {
     private long id;
     private int cantidadVotos;
 
+
+
     public Resultados(){
 
     }
