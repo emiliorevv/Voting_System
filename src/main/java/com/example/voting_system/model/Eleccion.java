@@ -1,8 +1,6 @@
 package com.example.voting_system.model;
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
-import java.util.Scanner;
 
 @Entity
 public class Eleccion {
@@ -16,7 +14,12 @@ public class Eleccion {
     private LocalDateTime fechaFin;
     private boolean activa;
 
-    //@OneToOne()
+    @OneToOne()
+    private Resultados resultados;
+
+    @ManyToOne()
+    @JoinColumn(name = "Eleccion actual")
+    private Eleccion eleccionActual;
 
     public Eleccion() {
 

@@ -14,6 +14,9 @@ public class Candidato {
     @OneToMany(mappedBy = "Cantidad de votos") //Funciona para la bidireccionalidad de la columna de la tabla
     private java.util.List<Voto> votos;
 
+    @OneToMany(mappedBy = "Eleccion actual")
+    private java.util.List<Eleccion> elecciones;
+
 
 
     public Candidato(){

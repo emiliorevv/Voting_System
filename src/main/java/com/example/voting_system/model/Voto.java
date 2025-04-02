@@ -15,6 +15,10 @@ public class Voto {
     @JoinColumn(name = "Cantidad de votos")
     private Candidato candidato;
 
+    @OneToMany(mappedBy = "Voto efectuado")
+    private java.util.List<Usuario> usuarios;
+
+
 
     public Voto() {
 

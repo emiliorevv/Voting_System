@@ -1,10 +1,5 @@
 package com.example.voting_system.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import com.example.voting_system.Enum.Role;
 
 @Entity
@@ -17,6 +12,10 @@ public class Usuario {
     private String email;
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @ManyToOne
+    @JoinColumn(name = "Voto efecutado")
+    private Voto voto;
 
     public Usuario() {
 
