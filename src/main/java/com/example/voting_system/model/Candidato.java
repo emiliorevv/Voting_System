@@ -11,10 +11,10 @@ public class Candidato {
     private String descripcion;
     private String imagen;
 
-    @OneToMany(mappedBy = "voto") //Funciona para la bidireccionalidad de la columna de la tabla
+    @OneToMany(mappedBy = "candidato") //Funciona para la bidireccionalidad de la columna de la tabla
     private java.util.List<Voto> votos;
 
-    @OneToMany(mappedBy = "eleccion")
+    @OneToMany(mappedBy = "candidato")
     private java.util.List<Eleccion> elecciones;
 
 
